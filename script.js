@@ -22,9 +22,9 @@ function getSliderValue() {
 function validateAmount() {
     var principal = document.getElementById("principal").value;
     var biggerThanZero = parseInt(principal) > 0;
-    if (!biggerThanZero) {
+    if (!biggerThanZero || principal == NaN) {
         alert("Enter a positive number");
+        console.log(principal)
         document.getElementById("principal").focus();
     }
-
 }
